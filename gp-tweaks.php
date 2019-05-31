@@ -3,7 +3,7 @@
  * Plugin Name: Tweaks for GeneratePress
  * Plugin URI:  https://dr7media.com/gptweaks
  * Description: Tweaks for GeneratePress. More menu colors, disable footer bar, add header and title color.
- * Version:     1.0.2
+ * Version:     1.0.?
  * Author:      John Chapman
  * Author URI:  https://dr7media.com
  * Text Domain: gp-tweaks

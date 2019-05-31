@@ -72,6 +72,9 @@ No FAQ questions yet - but if any arise, I will note them here.
 
 
 == Changelog ==
+= 1.0.3 =
+
+Removed duplicated code in gp-menu.php.
 
 = 1.0.2 =
 
@@ -87,4 +90,3 @@ Back To Top Button - Added option to specify Back To Top color, Hover color, and
 
 = 1.0 =
 * The release version.
-
