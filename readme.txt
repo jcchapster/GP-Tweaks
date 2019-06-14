@@ -17,6 +17,8 @@ Tweaks for GeneratePress. Menu - Multiple color options. Footer bar - disable, r
 Tweaks for GeneratePress, perhaps the best theme available.
 
 TYPOGRAPHY - Adjust font sizes, and font styles.
+Menu font size.
+Menu text transform: none, capitalize, uppercase, lowercase.
 
 HEADER - modify the following options:
 Header background color.
@@ -32,9 +34,8 @@ Selected Menu Item.
 Hover over Selected.
 Hover over UNSelected.
 Dropdown menu items color.
-Dropdown menu items selected.
-Dropdown menu items hover.
-Menu font size.
+Dropdown menu items selected color.
+Dropdown menu items hover color.
 Menu font color.
 
 FOOTER - modify the following footer settings:
@@ -83,7 +84,7 @@ Added Typography section (moved Menu font size settings to this section).
 Tweaked Menu Font size default setting.
 Fixed dropdown menu font size not being properly applied.
 Fixed dropdown current item hovering and not hovering color options.
-
+Added Text Transform for Menu items.
 
 = 1.0.2 =
 
