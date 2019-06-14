@@ -51,7 +51,7 @@ function gptweaks_typography_settings( $wp_customize ) {
 
             ?>
     		<style type="text/css">
-    			.main-navigation a {
+    			.main-navigation a, .main-navigation .main-nav ul ul li a {
     				font-size: <?php echo $menu_fontsize_selected; ?>;
     			}
     		</style>

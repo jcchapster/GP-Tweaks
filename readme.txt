@@ -16,6 +16,8 @@ Tweaks for GeneratePress. Menu - Multiple color options. Footer bar - disable, r
 
 Tweaks for GeneratePress, perhaps the best theme available.
 
+TYPOGRAPHY - Adjust font sizes, and font styles.
+
 HEADER - modify the following options:
 Header background color.
 
@@ -68,7 +70,7 @@ e.g.
 
 = Do I still need the GeneratePress Premium plugin? =
 
-Maybe! The GeneratePress Premium plugin has a LOT of features and capabilities.
+Maybe! It is a pretty fantastic plugin. The GeneratePress Premium plugin has a LOT of features and capabilities.
 GP Tweaks offers a few settings not available in the Premium plugin.
 Both GeneratePress Premium and this plugin, GP-Tweaks, can be installed at the same time.
 
@@ -78,7 +80,9 @@ Both GeneratePress Premium and this plugin, GP-Tweaks, can be installed at the s
 
 Removed duplicated code in gp-menu.php.
 Added Typography section (moved Menu font size settings to this section).
-Tweaked Menu Font size default.
+Tweaked Menu Font size default setting.
+Fixed dropdown menu font size not being properly applied.
+Fixed dropdown current item hovering and not hovering color options.
 
 
 = 1.0.2 =

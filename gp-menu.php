@@ -100,7 +100,7 @@ function gptweaks_menu_settings( $wp_customize ) {
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gptweaks_dropdown_menu_items_color', array(
   'settings' => 'gptweaks_dropdown_menu_items_color',
   'section' => 'gptweaks_menu_settings_section',
-  'label' => __( 'Drop Down Menu Items Color' ),
+  'label' => __( 'Dropdown Menu Items Color' ),
   ) ) );
 
 
@@ -114,8 +114,39 @@ function gptweaks_menu_settings( $wp_customize ) {
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gptweaks_dropdown_menu_items_hover_color', array(
   'settings' => 'gptweaks_dropdown_menu_items_hover_color',
   'section' => 'gptweaks_menu_settings_section',
-  'label' => __( 'Drop Down Menu Items Hover Color' ),
+  'label' => __( 'Dropdown Menu Items Hover Color' ),
   ) ) );
+
+  // Dropdown Menu Item Selected Hover Color
+    $wp_customize->add_setting( 'gptweaks_dropdown_menu_item_current_selected_hover_color', array(
+		'default' => '',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Dropwdown Menu Item Selected Hover Color Control
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gptweaks_dropdown_menu_item_current_selected_hover_color', array(
+	'settings' => 'gptweaks_dropdown_menu_item_current_selected_hover_color',
+	'section' => 'gptweaks_menu_settings_section',
+	'label' => __( 'Dropdown Menu Item Selected Hover Color' ),
+	) ) );
+
+
+    // Dropdown Menu Item current NOT Hovering Color
+      $wp_customize->add_setting( 'gptweaks_dropdown_menu_item_current_not_hovering_color', array(
+  		'default' => '',
+  		'sanitize_callback' => 'sanitize_hex_color',
+  	) );
+
+  	// Dropwdown Menu Item Selected Hover Color Control
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gptweaks_dropdown_menu_item_current_not_hovering_color', array(
+  	'settings' => 'gptweaks_dropdown_menu_item_current_not_hovering_color',
+  	'section' => 'gptweaks_menu_settings_section',
+  	'label' => __( 'Dropdown Menu Item Current Not Hovering Color' ),
+  	) ) );
+
+
+
+
 }
 add_action( 'customize_register', 'gptweaks_menu_settings' );
 
@@ -204,7 +235,25 @@ $menu_item_dropdown_hover_color = get_theme_mod( 'gptweaks_dropdown_menu_items_h
 
 	<?php
 
+  $menu_items_dropdown_selected_color = get_theme_mod( 'gptweaks_dropdown_menu_item_current_selected_hover_color' );
+        ?>
+    <style type="text/css">
+      .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover {
+        background-color: <?php echo $menu_items_dropdown_selected_color; ?>;
+      }
+    </style>
 
+  <?php
+
+      $menu_items_dropdown_not_hovering_color = get_theme_mod( 'gptweaks_dropdown_menu_item_current_not_hovering_color' );
+            ?>
+        <style type="text/css">
+          .main-navigation .main-nav ul ul li[class*="current-menu-"] > a {
+            background-color: <?php echo $menu_items_dropdown_not_hovering_color; ?>;
+          }
+        </style>
+
+      <?php
 }
 
 add_action( 'wp_head', 'gptweaks_menu_settings_apply' );
