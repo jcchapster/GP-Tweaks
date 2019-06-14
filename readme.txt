@@ -66,15 +66,20 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= Do you have any FAQ's? =
+= Do I still need the GeneratePress Premium plugin? =
 
-No FAQ questions yet - but if any arise, I will note them here.
+Maybe! The GeneratePress Premium plugin has a LOT of features and capabilities.
+GP Tweaks offers a few settings not available in the Premium plugin.
+Both GeneratePress Premium and this plugin, GP-Tweaks, can be installed at the same time.
 
 
 == Changelog ==
 = 1.0.3 =
 
 Removed duplicated code in gp-menu.php.
+Added Typography section (moved Menu font size settings to this section).
+Tweaked Menu Font size default.
+
 
 = 1.0.2 =
 

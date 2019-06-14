@@ -7,39 +7,10 @@ function gptweaks_menu_settings( $wp_customize ) {
 
     // Section for customizer controls
     $wp_customize->add_section( 'gptweaks_menu_settings_section', array(
-        'title'      => __( 'Menu Settings', 'text-domain' ),
+        'title'      => __( 'Menu Color Settings', 'text-domain' ),
 		'priority' => 30,
 		'panel'=>'gptweaks',
     ) );
-
-    // Menu Font Size(s) Setting
-    $wp_customize->add_setting( 'gptweaks_menu_fontsize_setting', array(
-		'default' => '',
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
-
-	// Dropdown selector for Menu Font Sizes Control
-	$wp_customize->add_control( 'gptweaks_menu_fontsize_setting', array(
-	'settings' => 'gptweaks_menu_fontsize_setting',
-	'section' => 'gptweaks_menu_settings_section',
-	'label' => __( 'Menu Font Size.' ),
-	'type'    => 'select',
-    'choices' => array(
-        'default' => 'Set to default.',
-		    '14px' =>  '14 px',
-        '15px' =>  '15 px',
-        '16px' =>  '16 px',
-        '17px' =>  '17 px',
-        '18px' =>  '18 px',
-        '19px' =>  '19 px',
-        '20px' =>  '20 px',
-        '21px' =>  '21 px',
-        '22px' =>  '22 px',
-        '23px' =>  '23 px',
-        '24px' =>  '24 px',
-        '25px' =>  '25 px',
-
-    ) ) );
 
     // Menu Font Colors(s) Setting
     $wp_customize->add_setting( 'gptweaks_menu_font_color_setting', array(
@@ -154,14 +125,6 @@ add_action( 'customize_register', 'gptweaks_menu_settings' );
 
 function gptweaks_menu_settings_apply() {
 
-	$menu_fontsize_selected = get_theme_mod( 'gptweaks_menu_fontsize_setting' );
-        ?>
-		<style type="text/css">
-			.main-navigation a {
-				font-size: <?php echo $menu_fontsize_selected; ?>;
-			}
-		</style>
-	<?php
 	$menu_item_color_settings = get_theme_mod( 'gptweaks_menu_font_color_setting' );
 	?>
 		<style type="text/css">
@@ -190,8 +153,8 @@ function gptweaks_menu_settings_apply() {
 	$menu_item_hover_color = get_theme_mod( 'gptweaks_menu_item_color_on_hover' );
         ?>
 		<style type="text/css">
-			.main-navigation .main-nav ul li:hover > a, 
-            .main-navigation .main-nav ul li:focus > a, 
+			.main-navigation .main-nav ul li:hover > a,
+            .main-navigation .main-nav ul li:focus > a,
             .main-navigation .main-nav ul li.sfHover > a {
 				background-color: <?php echo $menu_item_hover_color; ?>;
 			}
@@ -213,6 +176,14 @@ function gptweaks_menu_settings_apply() {
 			}
 		</style>
     <?php
+	$menu_item_current_hover_color = get_theme_mod( 'gptweaks_menu_item_current_hover_color' );
+        ?>
+		<style type="text/css">
+			.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover {
+				background-color: <?php echo $menu_item_current_hover_color; ?>;
+			}
+		</style>
+    <?php
     $menu_items_dropdown_color = get_theme_mod( 'gptweaks_dropdown_menu_items_color' );
           ?>
       <style type="text/css">
@@ -224,8 +195,8 @@ function gptweaks_menu_settings_apply() {
 $menu_item_dropdown_hover_color = get_theme_mod( 'gptweaks_dropdown_menu_items_hover_color' );
         ?>
 		<style type="text/css">
-			.main-navigation .main-nav ul ul li:hover > a, 
-            .main-navigation .main-nav ul ul li:focus > a, 
+			.main-navigation .main-nav ul ul li:hover > a,
+            .main-navigation .main-nav ul ul li:focus > a,
             .main-navigation .main-nav ul ul li.sfHover > a {
 				background-color: <?php echo $menu_item_dropdown_hover_color; ?>;
 			}
