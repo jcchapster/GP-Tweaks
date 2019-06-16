@@ -5,46 +5,71 @@
 function gptweaks_customize_title_tagline( $wp_customize ) {
 
 	// Create main panel for GP Tweaks
-    $wp_customize->add_panel('gptweaks',array(
-    'title'=>'GP Tweaks',
-    'description'=> 'Additional options to modify settings for the GeneratePress theme.',
-    'priority'=> 10,
-	));
+	$wp_customize->add_panel(
+		'gptweaks',
+		array(
+			'title'       => 'GP Tweaks',
+			'description' => 'Additional options to modify settings for the GeneratePress theme.',
+			'priority'    => 10,
+		)
+	);
 
-    // Section for customizer controls
-    $wp_customize->add_section( 'gptweaks_title_tagline_section' , array(
-        'title'      => __( 'Title / Tagline Settings', 'text-domain' ),
-		'priority' => 30,
-		'panel'=>'gptweaks',
-    ) );
+	// Section for customizer controls
+	$wp_customize->add_section(
+		'gptweaks_title_tagline_section',
+		array(
+			'title'    => __( 'Title / Tagline Settings', 'text-domain' ),
+			'priority' => 30,
+			'panel'    => 'gptweaks',
+		)
+	);
 
-    // Set Title Color
-    $wp_customize->add_setting( 'gptweaks_main_site_title_color' , array(
-        'default'     => '',
-		'sanitize_callback' => 'sanitize_hex_color',
-    ) );
+	// Set Title Color
+	$wp_customize->add_setting(
+		'gptweaks_main_site_title_color',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
 
-    // Add color picker control for Title
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gptweaks_main_site_title', array(
-	'label' => 'Site Title Color',
-	'section' => 'gptweaks_title_tagline_section',
-	'settings' => 'gptweaks_main_site_title_color',
-	) ) );
+	// Add color picker control for Title
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'gptweaks_main_site_title',
+			array(
+				'label'    => 'Site Title Color',
+				'section'  => 'gptweaks_title_tagline_section',
+				'settings' => 'gptweaks_main_site_title_color',
+			)
+		)
+	);
 
-    // Set Tagline Color
-    $wp_customize->add_setting( 'gptweaks_tagline_color' , array(
-        'default'     => '',
-		'sanitize_callback' => 'sanitize_hex_color',
-    ) );
+	// Set Tagline Color
+	$wp_customize->add_setting(
+		'gptweaks_tagline_color',
+		array(
+			'default'     => '',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
 
-    // Add color picker control for Tagline
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gptweaks_tagline_color', array(
-	'label' => 'Tagline Color',
-	'section' => 'gptweaks_title_tagline_section',
-	'settings' => 'gptweaks_tagline_color',
-	) ) );
+	// Add color picker control for Tagline
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'gptweaks_tagline_color',
+			array(
+				'label'    => 'Tagline Color',
+				'section'  => 'gptweaks_title_tagline_section',
+				'settings' => 'gptweaks_tagline_color',
+			)
+		)
+	);
 
 }
+
 add_action( 'customize_register', 'gptweaks_customize_title_tagline' );
 
 

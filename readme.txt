@@ -4,17 +4,21 @@ Tags: generatepress, theme, colors, footer, menu
 Donate link: No donate link or option currently exists.
 Tested up to: 5.2
 Requires at least: 5.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Tweaks for GeneratePress. Menu - Multiple color options. Footer bar - disable, replace text, change colors. Header - change background, title, site description color.
+Tweaks for GeneratePress. Typography. Menu - Multiple color options. Footer bar - disable, replace text, change colors. Header - change background, title, site description color.
 
 == Description ==
 
 
 Tweaks for GeneratePress, perhaps the best theme available.
+
+TYPOGRAPHY - Adjust font sizes, and font styles.
+Menu font size.
+Menu text transform: none, capitalize, uppercase, lowercase.
 
 HEADER - modify the following options:
 Header background color.
@@ -27,17 +31,16 @@ MENU - modify the following menu options:
 Full Width Menu background color.
 Constrained Width Menu background color.
 Selected Menu Item.
-Hover over Selected.
+Hover over Selected. esc_html(
 Hover over UNSelected.
 Dropdown menu items color.
-Dropdown menu items selected.
-Dropdown menu items hover.
-Menu font size.
+Dropdown menu items selected color.
+Dropdown menu items hover color.
 Menu font color.
 
 FOOTER - modify the following footer settings:
 NOTE: The default copyright in footer is REMOVED by activation of the GP Tweaks plugin.
-Hide / Unhide Footer via CSS.
+Hide / Unhide via CSS.
 Add text / HTML to the footer.
 Change text color.
 Change link and visited link text color.
@@ -66,12 +69,24 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= Do you have any FAQ's? =
+= Do I still need the GeneratePress Premium plugin? =
 
-No FAQ questions yet - but if any arise, I will note them here.
+Maybe! It is a pretty fantastic plugin. The GeneratePress Premium plugin has a LOT of features and capabilities.
+GP Tweaks offers a few settings not available in the Premium plugin.
+Both GeneratePress Premium and this plugin, GP-Tweaks, can be installed at the same time.
 
 
 == Changelog ==
+= 1.0.3 =
+
+Removed duplicated code in gp-menu.php.
+Added Typography section (moved Menu font size settings to this section).
+Tweaked Menu Font size default setting.
+Fixed dropdown menu font size not being properly applied.
+Fixed dropdown current item hovering and not hovering color options.
+Added Text Transform for Menu items.
+
+Cleaned up PHP to more closely match WordPress standards.
 
 = 1.0.2 =
 
@@ -87,4 +102,3 @@ Back To Top Button - Added option to specify Back To Top color, Hover color, and
 
 = 1.0 =
 * The release version.
-
