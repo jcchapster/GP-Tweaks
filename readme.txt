@@ -9,7 +9,7 @@ Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Tweaks for GeneratePress. Menu - Multiple color options. Footer bar - disable, replace text, change colors. Header - change background, title, site description color.
+Tweaks for GeneratePress. Typography. Menu - Multiple color options. Footer bar - disable, replace text, change colors. Header - change background, title, site description color.
 
 == Description ==
 
@@ -31,7 +31,7 @@ MENU - modify the following menu options:
 Full Width Menu background color.
 Constrained Width Menu background color.
 Selected Menu Item.
-Hover over Selected.
+Hover over Selected. esc_html(
 Hover over UNSelected.
 Dropdown menu items color.
 Dropdown menu items selected color.
@@ -40,7 +40,7 @@ Menu font color.
 
 FOOTER - modify the following footer settings:
 NOTE: The default copyright in footer is REMOVED by activation of the GP Tweaks plugin.
-Hide / Unhide Footer via CSS.
+Hide / Unhide via CSS.
 Add text / HTML to the footer.
 Change text color.
 Change link and visited link text color.
@@ -85,6 +85,8 @@ Tweaked Menu Font size default setting.
 Fixed dropdown menu font size not being properly applied.
 Fixed dropdown current item hovering and not hovering color options.
 Added Text Transform for Menu items.
+
+Cleaned up PHP to more closely match WordPress standards.
 
 = 1.0.2 =
 
